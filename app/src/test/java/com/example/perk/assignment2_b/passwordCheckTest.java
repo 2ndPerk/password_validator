@@ -16,5 +16,8 @@ public class passwordCheckTest {
         assertTrue(MainActivity.checkPassword("Aa1qwerty"));
         assertFalse(MainActivity.checkPassword("password"));
         assertFalse(MainActivity.checkPassword("aB1"));
+        assertFalse(MainActivity.checkPassword("abcqgreq1"));
+        assertFalse(MainActivity.checkPassword("ABCFEROWJGO1"));
+        assertFalse(MainActivity.checkPassword("abcDEFHEGH"));
     }
 }

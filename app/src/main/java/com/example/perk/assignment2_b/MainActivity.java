@@ -12,9 +12,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    public static boolean checkPassword(String s){
-        if(Pattern.matches("password", s.toLowerCase()))return false;
-        if(s.length() < 8)return false;
-        return true;
+    public static boolean checkPassword(String s) {
+        if (Pattern.matches("password", s.toLowerCase())) return false;
+        if (s.length() < 8) return false;
+        if (!(Pattern.matches(".*\\d.*", s))) return false;
+        if (!(Pattern.matches(".*[a-z].*", s))) return false;
+        return Pattern.matches(".*[A-Z].*", s);
     }
 }
